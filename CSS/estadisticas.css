@@ -1,0 +1,12 @@
+.estadisticas-container {
+    display: inline-block;
+    width: 400px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.estadisticas {
+    font-size: 18px;
+    margin-bottom: 10px;
+}

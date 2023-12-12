@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="barraNavegación.css">
+    <link rel="stylesheet" href="registro_nuevo_vehiculo.css">
+    
+    <title>Control de Parqueadero</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="Vehiculos.html">Vehículos</a></li>
+                <li><a href="#reporte">Reporte</a></li>
+                <li><a href="estadisticas.html">Estadísticas</a></li>
+                <li><a href="tipos.html">Tipos</a></li>
+                <li><a href="#tarifas">Tarifas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+        <!-- Agregar este botón en el lugar que desees mostrarlo -->
+    <button onclick="abrirVentanaRegistrarNuevo()">Registrar Nuevo</button>
+
+    <!-- Ventana emergente para registrar nuevo vehículo -->
+    <div id="registroNuevoModal" class="overlay">
+        <div class="modal">
+            <h2>Registrar Nuevo Vehículo</h2>
+
+            <!-- Selector de Tipo -->
+            <label for="tipoRegistroNuevo">Tipo:</label>
+            <select id="tipoRegistroNuevo">
+                <!-- Opciones se cargarán dinámicamente desde el localStorage -->
+            </select><br>
+
+            <!-- Input para Placa -->
+            <label for="placaRegistroNuevo">Placa:</label>
+            <input type="text" id="placaRegistroNuevo" required><br>
+
+            <!-- Input para Descripción -->
+            <label for="descripcionRegistroNuevo">Descripción (máximo 3 palabras):</label>
+            <input type="text" id="descripcionRegistroNuevo" maxlength="30"><br>
+
+            <!-- Botones -->
+            <button onclick="guardarRegistroNuevo()">Guardar</button>
+            <button onclick="cancelarRegistroNuevo()">Cancelar</button>
+        </div>
+    </div>
+
+    <div id="registrosTitulo" class="registros-horizontal">
+        <div>Tipo</div>
+        <div>Placa</div>
+        <div>Descripción</div>
+        <div>Entrada</div>
+        <div>Salida</div>
+        <div>Tiket</div>
+    </div>
+
+    <!-- Agregar esta lista donde se mostrará la información de los registros -->
+    <table id="registrosTabla">
+        <!-- Aquí se insertarán las filas de registros -->
+    </table>
+
+    <script src="vehiculos.js"></script>
+</body>
+</html>

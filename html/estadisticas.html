@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="barraNavegación.css">
+    <link rel="stylesheet" href="estadisticas.css">
+    <title>estadisticas</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="Vehiculos.html">Vehículos</a></li>
+                <li><a href="#reporte">Reporte</a></li>
+                <li><a href="estadisticas.html">Estadísticas</a></li>
+                <li><a href="tipos.html">Tipos</a></li>
+                <li><a href="#tarifas">Tarifas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1>Estadísticas de Vehículos</h1>
+
+    <div class="estadisticas-container">
+        <h3>Estadísticas del Mes</h3>
+        <div class="estadisticas" id="estadisticasMes"></div>
+        <canvas id="graficoMes" width="400" height="200"></canvas>
+    </div>
+    
+    <div class="estadisticas-container">
+        <h3>Estadísticas del Año</h3>
+        <div class="estadisticas" id="estadisticasAnio"></div>
+        <canvas id="graficoAnio" width="400" height="200"></canvas>
+    </div>
+    
+    <!-- Estadísticas Totales -->
+    <div class="estadisticas-container">
+        <h3>Estadísticas Totales</h3>
+        <div class="estadisticas" id="estadisticasTotales"></div>
+        <canvas id="graficoTotales" width="400" height="200"></canvas>
+    </div>
+
+    <script src="estaditicas.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>
